@@ -16,12 +16,12 @@ public class StackMain {
 	 * @param Strig
 	 * @return Stack<String>
 	 */
-	private static Stack<String> createdStack(String word){
+	private static Stack<String> createdStack(String words){
 		Stack<String> stack = new Stack<String>();
-		if(!"".equals(word)){
+		if(!"".equals(words)){
 			stack = new Stack<String>();
-			for(int index=0;index<word.length();index++){
-				stack.push(String.valueOf(word.charAt(index)));
+			for(int index=0;index<words.length();index++){
+				stack.push(String.valueOf(words.charAt(index)));
 			}
 		}
 		return stack;
