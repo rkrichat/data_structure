@@ -8,9 +8,9 @@ import linklist.node.Node;
  */
 public class createLinkList {
 	public static void main(String[] args){
-		Node head=new Node(0);
-		for(int index=1;index<10;index++){
-			createNode(head,index);
+		Node head=null;
+		for(int index=0;index<10;index++){
+			head = createNode(head,index);
 		}
 		showMessage(head);
 	}
@@ -20,7 +20,7 @@ public class createLinkList {
 	 * @param head
 	 * @return Node
 	 */
-	private static void createNode(Node head,Object obj){
+	private static Node createNode(Node head,Object obj){
 		if(null==head){
 			head = new Node(0);
 		}else{
@@ -33,6 +33,7 @@ public class createLinkList {
 			}
 			prev.setNext(tempNode);
 		}
+		return head;
 	}
 	
 	/**
