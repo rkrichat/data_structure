@@ -1,5 +1,9 @@
 package linklist.node;
-
+/**
+ * This class for prepare Node :: 19/03/2017
+ * @author rkritchat
+ *
+ */
 public class Node {
 	private Node next;
 	private Object item;
