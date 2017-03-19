@@ -1,4 +1,4 @@
-package linklist.deletenodeinlinklist;
+package linklist.deletelinklist;
 
 import linklist.createlinklist.CreateLinkList;
 import linklist.node.Node;
