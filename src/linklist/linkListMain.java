@@ -3,7 +3,7 @@ package linklist;
 import linklist.node.Node;
 /**
  * This class for crate Node and connect Node 19/03/2017
- * @author NP
+ * @author rkritchat
  *
  */
 public class linkListMain {
