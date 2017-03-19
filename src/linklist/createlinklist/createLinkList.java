@@ -1,4 +1,4 @@
-package linklist;
+package linklist.createlinklist;
 
 import linklist.node.Node;
 /**
@@ -6,7 +6,7 @@ import linklist.node.Node;
  * @author rkritchat
  *
  */
-public class linkListMain {
+public class createLinkList {
 	public static void main(String[] args){
 		Node head=new Node(0);
 		for(int index=1;index<10;index++){
