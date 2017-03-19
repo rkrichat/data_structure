@@ -13,8 +13,8 @@ public class Node {
 		item = null;
 	}
 	public Node(Object item){
-		next = null;
 		this.item=item;
+		next = null;
 	}
 	
 	public Node(Object item,Node next){
