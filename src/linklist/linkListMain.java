@@ -21,18 +21,14 @@ public class linkListMain {
 	 * @return Node
 	 */
 	private static void createNode(Node head,Object obj){
-		if(null==head){
-			head = new Node(0);
-		}else{
-			Node tempNode = new Node(obj);
-			Node cur = head;
-			Node prev = cur;
-			while(null!=cur){
-				prev = cur;
-				cur = cur.getNext();
-			}
-			prev.setNext(tempNode);
+		Node tempNode = new Node(obj);
+		Node cur = head;
+		Node prev = cur;
+		while(null!=cur){
+			prev = cur;
+			cur = cur.getNext();
 		}
+		prev.setNext(tempNode);
 	}
 	
 	/**
