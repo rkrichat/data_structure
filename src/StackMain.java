@@ -18,8 +18,11 @@ public class StackMain {
 	 */
 	private static Stack<String> createdStack(String word){
 		Stack<String> stack = new Stack<String>();
-		for(int index=0;index<word.length();index++){
-			stack.push(String.valueOf(word.charAt(index)));
+		if(!"".equals(word)){
+			stack = new Stack<String>();
+			for(int index=0;index<word.length();index++){
+				stack.push(String.valueOf(word.charAt(index)));
+			}
 		}
 		return stack;
 	}
@@ -29,6 +32,10 @@ public class StackMain {
 	 * @param results
 	 */
 	private static void showStack(Stack<String> results){
+		if(results.isEmpty()){
+			System.out.println("Not found word");
+			return;
+		}
 		while(!results.isEmpty()){
 			System.out.print(results.pop().toUpperCase());
 		}
