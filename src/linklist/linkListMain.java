@@ -3,7 +3,7 @@ package linklist;
 import linklist.node.Node;
 /**
  * This class for crate Node and connect Node 19/03/2017
- * @author NP
+ * @author rkritchat
  *
  */
 public class linkListMain {
@@ -21,18 +21,14 @@ public class linkListMain {
 	 * @return Node
 	 */
 	private static void createNode(Node head,Object obj){
-		if(null==head){
-			head = new Node(0);
-		}else{
-			Node tempNode = new Node(obj);
-			Node cur = head;
-			Node prev = cur;
-			while(null!=cur){
-				prev = cur;
-				cur = cur.getNext();
-			}
-			prev.setNext(tempNode);
+		Node tempNode = new Node(obj);
+		Node cur = head;
+		Node prev = cur;
+		while(null!=cur){
+			prev = cur;
+			cur = cur.getNext();
 		}
+		prev.setNext(tempNode);
 	}
 	
 	/**
