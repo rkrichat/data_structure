@@ -6,12 +6,10 @@ import linklist.node.Node;
  * @author rkritchat
  *
  */
-public class createLinkList {
+public class CreateLinkList {
 	public static void main(String[] args){
 		Node head=null;
-		for(int index=0;index<10;index++){
-			head = createNode(head,index);
-		}
+		head = initNode(head,5);
 		showMessage(head);
 	}
 	
@@ -20,13 +18,13 @@ public class createLinkList {
 	 * @param head
 	 * @return Node
 	 */
-	private static Node createNode(Node head,Object obj){
+	protected static Node createNode(Node head,Object obj){
 		if(null==head){
 			head = new Node(0);
 		}else{
 			Node tempNode = new Node(obj);
 			Node cur = head;
-			Node prev = cur;
+			Node prev = null;
 			while(null!=cur){
 				prev = cur;
 				cur = cur.getNext();
@@ -40,11 +38,24 @@ public class createLinkList {
 	 * Show message from Node :: 19/03/2017
 	 * @param head
 	 */
-	private static void showMessage(Node head){
-		Node prev = head;
-		while(prev!=null){
-			System.out.println(prev.getItem());
-			prev = prev.getNext();
+	protected static void showMessage(Node head){
+		Node curr = head;
+		while(curr!=null){
+			System.out.println(curr.getItem());
+			curr = curr.getNext();
 		}
+	}
+	
+	/**
+	 * initialize Node.
+	 * @param head
+	 * @param length
+	 * @return Node
+	 */
+	protected static Node initNode(Node head,int length){
+		for(int index=0;index<length;index++){
+			head = createNode(head,index);
+		}
+		return head;
 	}
 }
