@@ -4,26 +4,26 @@ package linklist.node;
  * @author rkritchat
  *
  */
-public class Node {
-	private Node next;
-	private Object item;
+public class Node<T> { //Modify for add Generic 20/03.2017
+	private Node<T> next;
+	private T item;
 	
 	public Node(){
 		next = null;
 		item = null;
 	}
-	public Node(Object item){
+	public Node(T item){
 		this.item=item;
 		next = null;
 	}
 	
-	public Node(Object item,Node next){
+	public Node(T item,Node<T> next){
 		this.item = item;
 		this.next = next;
 	}
 	
 	//getter
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 	public Object getItem() {
@@ -31,10 +31,10 @@ public class Node {
 	}
 	
 	//setter
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
-	public void setItem(Object item) {
+	public void setItem(T item) {
 		this.item = item;
 	}	
 }

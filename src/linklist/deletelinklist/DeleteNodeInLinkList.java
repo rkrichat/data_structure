@@ -9,7 +9,7 @@ import linklist.node.Node;
  */
 public class DeleteNodeInLinkList extends CreateLinkList{
 	public static void main(String[] args){
-		Node head=null;
+		Node<Integer> head=null;
 		head = initNode(head,5);
 		head = deleteNode(head,2); //delete item == 2
 		showMessage(head);
@@ -21,9 +21,9 @@ public class DeleteNodeInLinkList extends CreateLinkList{
 	 * @param item
 	 * @return head
 	 */
-	private static Node deleteNode(Node head, Object item){
-		Node cur = head;
-		Node prev = null;
+	private static Node<Integer> deleteNode(Node<Integer> head, Object item){
+		Node<Integer> cur = head;
+		Node<Integer> prev = null;
 		while(cur!=null){
 			if(cur.getItem()==item && cur==head){
 				head = cur.getNext();

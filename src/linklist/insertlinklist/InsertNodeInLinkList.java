@@ -9,9 +9,9 @@ import linklist.node.Node;
  */
 public class InsertNodeInLinkList extends CreateLinkList{
 	public static void main(String[] args){
-		Node head = null;
+		Node<Integer> head = null;
 		head = initNode(head,5);
-		Node newLinkList = new Node(99);
+		Node<Integer> newLinkList = new Node<Integer>(99);
 		head = insertLinkList(head,newLinkList,2); //insert before item is 2 or last.
 		showMessage(head);
 	}
@@ -23,9 +23,9 @@ public class InsertNodeInLinkList extends CreateLinkList{
 	 * @param item
 	 * @return head
 	 */
-	protected static Node insertLinkList(Node head,Node newNode,Object item){
-		Node cur = head;
-		Node prev = null;
+	protected static Node<Integer> insertLinkList(Node<Integer> head,Node<Integer> newNode,Object item){
+		Node<Integer> cur = head;
+		Node<Integer> prev = null;
 		boolean found=false;
 		while(cur!=null){
 			if(cur.getItem()==item && cur==head){
