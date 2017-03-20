@@ -8,7 +8,7 @@ import linklist.node.Node;
  */
 public class CreateLinkList {
 	public static void main(String[] args){
-		Node head=null;
+		Node<Integer> head=null;
 		head = initNode(head,5);
 		showMessage(head);
 	}
@@ -18,13 +18,13 @@ public class CreateLinkList {
 	 * @param head
 	 * @return Node
 	 */
-	protected static Node createNode(Node head,Object obj){
+	protected static Node<Integer> createNode(Node<Integer> head,int obj){
 		if(null==head){
-			head = new Node(0);
+			head = new Node<Integer>(0);
 		}else{
-			Node tempNode = new Node(obj);
-			Node cur = head;
-			Node prev = null;
+			Node<Integer> tempNode = new Node<Integer>(obj);
+			Node<Integer> cur = head;
+			Node<Integer> prev = null;
 			while(null!=cur){
 				prev = cur;
 				cur = cur.getNext();
@@ -38,8 +38,8 @@ public class CreateLinkList {
 	 * Show message from Node :: 19/03/2017
 	 * @param head
 	 */
-	protected static void showMessage(Node head){
-		Node curr = head;
+	protected static void showMessage(Node<Integer> head){
+		Node<Integer> curr = head;
 		while(curr!=null){
 			System.out.println(curr.getItem());
 			curr = curr.getNext();
@@ -52,7 +52,7 @@ public class CreateLinkList {
 	 * @param length
 	 * @return Node
 	 */
-	protected static Node initNode(Node head,int length){
+	protected static Node<Integer> initNode(Node<Integer> head,int length){
 		for(int index=0;index<length;index++){
 			head = createNode(head,index);
 		}
