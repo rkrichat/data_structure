@@ -1,7 +1,7 @@
 package doublylinklist.doublelink;
 /**
  * This class for prepare Doubly Link List. :: 20/03/2017
- * @author NP
+ * @author rkritchat
  *
  */
 public class DoubleLink {
