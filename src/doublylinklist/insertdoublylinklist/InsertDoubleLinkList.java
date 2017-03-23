@@ -3,7 +3,7 @@ package doublylinklist.insertdoublylinklist;
 import doublylinklist.createdoublylinklist.CreateDoublyLinkList;
 import doublylinklist.doublelink.DoubleLink;
 /**
- * This class for insert Double Link List 
+ * This class for insert Double Link List :: 23/03/2017
  * @author rkritchat
  *
  */
