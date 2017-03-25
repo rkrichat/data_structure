@@ -7,11 +7,6 @@ import linklist.node.Node;
  *
  */
 public class CreateLinkList {
-	public static void main(String[] args){
-		Node<Integer> head=null;
-		head = initNode(head,5);
-		showMessage(head);
-	}
 	
 	/**
 	 * This method for create Node :: 19/03/2017
