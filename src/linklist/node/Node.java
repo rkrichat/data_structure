@@ -4,7 +4,7 @@ package linklist.node;
  * @author rkritchat
  *
  */
-public class Node<T> { //Modify for add Generic 20/03.2017
+public class Node<T> { //Modify for add Generic 20/03/2017
 	private Node<T> next;
 	private T item;
 	
