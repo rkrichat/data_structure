@@ -7,12 +7,7 @@ import doublylinklist.doublelink.DoubleLink;
  *
  */
 public class CreateDoublyLinkList {
-	public static void main(String[] agrs){
-		DoubleLink head = null;
-		String[] data = {"First","Second","Third","Fourth","fifth"};
-		head = initNode(head, data);
-		showMessage(head);
-	}
+	
 	/**
 	 * This method for crate and connect Doubly Link List. :: 20/03/2017
 	 * @param head
