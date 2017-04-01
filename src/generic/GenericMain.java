@@ -8,24 +8,22 @@ package generic;
  */
 public class GenericMain {
 	public static void main(String[] args) {
-		GenericClass<String> stringItem = new GenericClass<String>();
-		stringItem.setItem("Hello");
+		GenericClass<String> stringItem = new GenericClass<String>("Hello");
 		showMessage("Generic Integer : ", stringItem);
 
-		GenericClass<Integer> intItem = new GenericClass<Integer>();
-		intItem.setItem(20);
+		GenericClass<Integer> intItem = new GenericClass<Integer>(20);
 		intItem.setItem(intItem.getItem() + 90);
 		showMessage("Generic Integer : ", intItem);
 	}
 
 	/**
 	 * This method for showMessage
+	 * @param <T>
 	 * 
 	 * @param description
 	 * @param item
 	 */
-	@SuppressWarnings("rawtypes")
-	private static void showMessage(String description, GenericClass item) {
+	private static <T> void showMessage(String description, GenericClass<T> item) {
 		System.out.println(description + item.getItem());
 	}
 }
