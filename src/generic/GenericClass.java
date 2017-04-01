@@ -8,6 +8,15 @@ package generic;
  * @param <T>
  */
 public class GenericClass<T> {
+	private T item;
+
+	public GenericClass() {
+	}
+
+	public GenericClass(T item) {
+		this.item = item;
+	}
+
 	public T getItem() {
 		return item;
 	}
@@ -15,6 +24,4 @@ public class GenericClass<T> {
 	public void setItem(T item) {
 		this.item = item;
 	}
-
-	private T item;
 }
