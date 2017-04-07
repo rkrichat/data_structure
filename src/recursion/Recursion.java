@@ -2,15 +2,24 @@ package recursion;
 
 import java.util.Random;
 
+/**
+ * This class is example to use recursion 
+ * @author rkritchat
+ * @since Apr 7, 2017
+ */
 public class Recursion {
+	private static Random gen = new Random();
 	public static void main(String[] args){
 		recursive(0);
 	}
 	
+	/**
+	 * recursive
+	 * @param round
+	 */
 	private static void recursive(int round){
 		round++;
 		System.out.println("Round : " + round);
-		Random gen = new Random();
 		int result = gen.nextInt(10);
 		if(result == 9){
 			System.out.println("--- Found ---" );
